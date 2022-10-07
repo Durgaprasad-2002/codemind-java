@@ -1,43 +1,33 @@
-import java.util.*;
-class hh
+import java.util.Scanner;
+class ab
 {
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
-        int n,c=0;
+        int x[],even[],odd[],i,j=0,k=0,n;
         n=sc.nextInt();
-        int o;
-        int e=0;
-        ///System.out.print(o+" "+e+" ");
-        int x[]=new int[n];
-        int y[]=new int[n];
-        for(int i=0;i<n;i++)
+        x=new int[n];
+        for(i=0; i<n; i++)
+        
+            x[i]=sc.nextInt();
+        even=new int[n];
+        odd=new int[n];
+        for(i=0; i<n; i++)
         {
-            int a;
-            a=sc.nextInt();
-            x[i]=a;
-            if (a%2==0)
-                c+=1;
-        }
-        o=c;
-        for(int j=0;j<n;j++)
-        {
-            int a=x[j];
-            if (a%2==0)
-            {
-                y[e]=a;
-                e++;
-                
-            }
+            if(x[i]%2==0)
+                even[j++]=x[i];
             else
-            {
-               y[o]=a;
-               o+=1;
-            }
+                odd[k++]=x[i];
         }
-        for(int i=0;i<n;i++)
+        for(i=0; i<j; i++)
         {
-            System.out.print(y[i]+" ");
+            System.out.print(even[i]+" ");
         }
+        for(i=0; i<k; i++)
+        {
+            System.out.print(odd[i]+" ");
+            
+        }
+        
     }
 }
